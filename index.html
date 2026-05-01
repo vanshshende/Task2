@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Webpage</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Daily Planner</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>🚀 My Creative Webpage</h1>
-        <p class="subtitle">Learning Web Development in Style</p>
+<header>
+    <nav>
+        <h1>Smart Planner</h1>
+        <ul>
+            <li><a href="#form">Contact</a></li>
+            <li><a href="#todo">Tasks</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <div class="card">
-            <h2>👨‍💻 About Me</h2>
-            <p>I am exploring HTML, CSS & JavaScript and building cool projects!</p>
+<section class="hero">
+    <h2>Organize Your Day Smartly</h2>
+    <p>Manage tasks and stay connected easily.</p>
+</section>
+
+<main class="container">
+
+    <!-- Contact Form -->
+    <section id="form" class="card">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Enter Name">
+            <input type="email" id="email" placeholder="Enter Email">
+            <input type="text" id="phone" placeholder="Enter Phone">
+            <textarea id="message" placeholder="Message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="formMsg"></p>
+    </section>
+
+    <!-- ToDo List -->
+    <section id="todo" class="card">
+        <h2>Daily Tasks</h2>
+        <div class="todo-box">
+            <input type="text" id="taskInput" placeholder="Add New Task">
+            <button onclick="addTask()">Add</button>
         </div>
+        <ul id="taskList"></ul>
+    </section>
 
-        <div class="card">
-            <h2>🖼️ Image</h2>
-            <img src="https://tse3.mm.bing.net/th/id/OIP.kUSWyi3WZ8bQpuRM57w2VwHaEK?pid=Api&P=0&h=220" alt="WebDev">
-        </div>
+</main>
 
-        <div class="card">
-            <h2>🔗 Useful Link</h2>
-            <a href="https://www.google.com" target="_blank">Visit Google</a>
-        </div>
+<footer>
+    <p>© 2026 Smart Planner | Internship Project</p>
+</footer>
 
-        <div class="card">
-            <h2>⚡ Try Interaction</h2>
-            <button onclick="showMessage()">Click Me</button>
-        </div>
-    </div>
-
-    <!-- Custom Alert Box -->
-    <div id="popup" class="popup">
-        <p>🎉 Button Clicked Successfully!</p>
-        <button onclick="closePopup()">Close</button>
-    </div>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
